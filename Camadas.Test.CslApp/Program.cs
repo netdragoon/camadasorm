@@ -47,8 +47,19 @@ namespace Camadas.Test.CslApp
 
                 //conn.Add(au);
 
-                int id = 1;
-                Author aut = conn.Find<Author>(id);
+                //int id = 1;
+                //Author aut = conn.Find<Author>(id);
+
+                //Customer cust = new Customer();
+                //cust.Name = "Limeira";
+                //cust.Address = new Address();
+                //cust.Address.Number = "136";
+                //cust.Address.Street = "Street North";
+
+                //conn.Add(cust);
+                long id = 1;
+                Customer cust = conn.Find<Customer>(id);
+                Address addr = conn.Find<Address>(id);
 
             }
         }

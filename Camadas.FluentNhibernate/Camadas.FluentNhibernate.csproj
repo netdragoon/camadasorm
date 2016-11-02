@@ -52,12 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address.cs" />
     <Compile Include="Author.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="IConnection.cs" />
+    <Compile Include="Map\AddressMap.cs" />
     <Compile Include="Map\AuthorMap.cs" />
     <Compile Include="Map\BookMap.cs" />
+    <Compile Include="Map\CustomerMap.cs" />
     <Compile Include="Map\PhoneMap.cs" />
     <Compile Include="Map\UserMap.cs" />
     <Compile Include="Phone.cs" />
