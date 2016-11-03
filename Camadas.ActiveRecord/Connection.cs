@@ -2,7 +2,7 @@
 using Castle.ActiveRecord.Framework.Config;
 using System.Collections.Generic;
 using System.Reflection;
-
+//https://github.com/castleproject/ActiveRecord/blob/master/docs/configuration-and-initialization.md
 namespace Camadas.ActiveRecord
 {
     public class Connection
