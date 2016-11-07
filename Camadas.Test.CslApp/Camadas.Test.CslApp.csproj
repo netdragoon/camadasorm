@@ -65,6 +65,14 @@
     <Reference Include="Castle.Windsor">
       <HintPath>..\Ac\net40\Castle.Windsor.dll</HintPath>
     </Reference>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.Contrib.1.50.0\lib\net45\Dapper.Contrib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Ac\net40\Iesi.Collections.dll</HintPath>
@@ -93,6 +101,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -112,6 +121,10 @@
     <ProjectReference Include="..\Camadas.ActiveRecord\Camadas.ActiveRecord.csproj">
       <Project>{d4667a1d-2601-4814-a203-565952f5ddf7}</Project>
       <Name>Camadas.ActiveRecord</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Camadas.Dapper\Camadas.DapperSqlServer.csproj">
+      <Project>{a24cc741-6f2b-4846-b3ef-0ce1fc638f3d}</Project>
+      <Name>Camadas.DapperSqlServer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

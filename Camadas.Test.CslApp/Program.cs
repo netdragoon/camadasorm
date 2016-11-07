@@ -1,10 +1,44 @@
 ﻿using Camadas.ActiveRecord;
+using Camadas.DapperSqlServer;
+using System;
 
 namespace Camadas.Test.CslApp
 {
     class Program
     {
         static void Main(string[] args)
+        {
+
+
+            TestDapper();
+            System.Console.WriteLine("Pressione <Enter>");
+            System.Console.ReadKey();
+
+        } 
+        static void TestDapper()
+        {
+            RepositoryClient repClient = new RepositoryClient();
+            RepositoryPhone repPhone = new RepositoryPhone();
+            ////Client cl = new Client();
+            ////cl.Name = "Cliente 2";
+            ////cl.Created = DateTime.Now.AddDays(-1);
+            ////cl.Active = true;
+
+            var result = repClient.FindWithPhone(1);
+
+            RepositoryPhone rep = new RepositoryPhone();
+            //Phone p1 = new Phone();
+            //p1.ClientId = 1;
+            //p1.Ddd = "023";
+            //p1.Number = "9988-9890";            
+            //Phone p2 = new Phone();
+            //p2.ClientId = 1;
+            //p2.Ddd = "022";
+            //p2.Number = "9977-6676";
+            //rep.Insert(p1);
+            //rep.Insert(p2);
+        }
+        static void TestActiveRecords()
         {
             try
             {      //TestFluentNhibernate();
@@ -19,17 +53,13 @@ namespace Camadas.Test.CslApp
                 //    Street = "Jovem Pan, Site Lameda"
                 //};
                 //cu.UpdateAndFlush();
-                    
+
             }
             catch (System.Exception ex)
-            {     
+            {
                 System.Console.WriteLine(ex.Message);
             }
-            
-            System.Console.WriteLine("Pression <Enter>");
-            System.Console.ReadKey();
-
-        } 
+        }
 
         static void TestFluentNhibernate()
         {
