@@ -25,8 +25,9 @@ namespace Camadas.Test.CslApp
             ////cl.Created = DateTime.Now.AddDays(-1);
             ////cl.Active = true;
 
-            var result = repClient.FindWithPhone(1);
+            var result = repClient.FindWithPhone(1);            
 
+            var d = repPhone.Delete(1);
             
             //Phone p1 = new Phone();
             //p1.ClientId = 1;

@@ -6,7 +6,8 @@ namespace Camadas.DapperSqlServer
         where T: class
     {
         IList<T> All();
-        bool Delete(T entity);
+        bool Delete(T entity);        
+        bool Delete<TKey>(TKey id, string primaryKeyName = "Id");
         T Find<TKey>(TKey id);
         long Insert(T entity);
         bool Update(T entity);
