@@ -2,7 +2,8 @@
 
 namespace Camadas.DapperSqlServer
 {
-    public interface IConnection<T>
+    public interface IRepository<T> : System.IDisposable
+        where T: class
     {
         IList<T> All();
         bool Delete(T entity);

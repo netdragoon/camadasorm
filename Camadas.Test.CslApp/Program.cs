@@ -7,9 +7,7 @@ namespace Camadas.Test.CslApp
     class Program
     {
         static void Main(string[] args)
-        {
-
-
+        {    
             TestDapper();
             System.Console.WriteLine("Pressione <Enter>");
             System.Console.ReadKey();
@@ -17,8 +15,11 @@ namespace Camadas.Test.CslApp
         } 
         static void TestDapper()
         {
-            RepositoryClient repClient = new RepositoryClient();
-            RepositoryPhone repPhone = new RepositoryPhone();
+            RepositoryClient repClient = new RepositoryClient(DapperSqlServer.Connection.Instance);
+            RepositoryPhone repPhone = new RepositoryPhone(DapperSqlServer.Connection.Instance);
+
+            //var clients = repClient.All();
+            //var phones = repPhone.All();
             ////Client cl = new Client();
             ////cl.Name = "Cliente 2";
             ////cl.Created = DateTime.Now.AddDays(-1);
@@ -26,7 +27,7 @@ namespace Camadas.Test.CslApp
 
             var result = repClient.FindWithPhone(1);
 
-            RepositoryPhone rep = new RepositoryPhone();
+            
             //Phone p1 = new Phone();
             //p1.ClientId = 1;
             //p1.Ddd = "023";
@@ -42,7 +43,7 @@ namespace Camadas.Test.CslApp
         {
             try
             {      //TestFluentNhibernate();
-                Connection.Load();
+                ActiveRecord.Connection.Load();
                 long id = 3;
                 Customer cu = Customer.Find(id);
                 //cu.Name = "João Paulo";
