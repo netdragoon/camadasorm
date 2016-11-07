@@ -9,8 +9,8 @@ namespace Camadas.Test.CslApp
         static void Main(string[] args)
         {    
             TestDapper();
-            System.Console.WriteLine("Pressione <Enter>");
-            System.Console.ReadKey();
+            Console.WriteLine("Pressione <Enter>");
+            Console.ReadKey();
 
         } 
         static void TestDapper()
