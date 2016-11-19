@@ -99,6 +99,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Ac\net40\NHibernate.Search.dll</HintPath>
     </Reference>
+    <Reference Include="Passive, Version=0.3.0.0, Culture=neutral, PublicKeyToken=91b9ae81b72178fc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Passive.0.3.0.0\lib\net40\Passive.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -125,6 +129,14 @@
     <ProjectReference Include="..\Camadas.Dapper\Camadas.DapperSqlServer.csproj">
       <Project>{a24cc741-6f2b-4846-b3ef-0ce1fc638f3d}</Project>
       <Name>Camadas.DapperSqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Camadas.Passive\Camadas.Passive.csproj">
+      <Project>{08b8a6d9-ce38-45a5-be35-9ef6e7fd597f}</Project>
+      <Name>Camadas.Passive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Camadas.PetaPoco\Camadas.PetaPoco.csproj">
+      <Project>{7bda682c-0c98-4286-a541-d05932dcb430}</Project>
+      <Name>Camadas.PetaPoco</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

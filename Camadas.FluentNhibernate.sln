@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camadas.ActiveRecord", "Cam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camadas.DapperSqlServer", "Camadas.Dapper\Camadas.DapperSqlServer.csproj", "{A24CC741-6F2B-4846-B3EF-0CE1FC638F3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camadas.PetaPoco", "Camadas.PetaPoco\Camadas.PetaPoco.csproj", "{7BDA682C-0C98-4286-A541-D05932DCB430}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camadas.Passive", "Camadas.Passive\Camadas.Passive.csproj", "{08B8A6D9-CE38-45A5-BE35-9EF6E7FD597F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{A24CC741-6F2B-4846-B3EF-0CE1FC638F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A24CC741-6F2B-4846-B3EF-0CE1FC638F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A24CC741-6F2B-4846-B3EF-0CE1FC638F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BDA682C-0C98-4286-A541-D05932DCB430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BDA682C-0C98-4286-A541-D05932DCB430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BDA682C-0C98-4286-A541-D05932DCB430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BDA682C-0C98-4286-A541-D05932DCB430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B8A6D9-CE38-45A5-BE35-9EF6E7FD597F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B8A6D9-CE38-45A5-BE35-9EF6E7FD597F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B8A6D9-CE38-45A5-BE35-9EF6E7FD597F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B8A6D9-CE38-45A5-BE35-9EF6E7FD597F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

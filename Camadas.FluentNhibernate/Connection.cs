@@ -13,10 +13,8 @@ namespace Camadas.FluentNhibernate
         private ISession session;
         public Connection()
         {
-            OpenSession();
-
-        }
-
+            OpenSession();   
+        }   
         public ISession Session()
         {
             return session;
@@ -83,13 +81,11 @@ namespace Camadas.FluentNhibernate
             session.Dispose();
             sessionFactory.Dispose();
 
-        }
-
+        }       
         public IList SqlQuery(string sql)
         {
             return session.CreateSQLQuery(sql).List();
-        }
-
+        }   
         public IQuery Query(string sql)
         {
             return session.CreateQuery(sql);
