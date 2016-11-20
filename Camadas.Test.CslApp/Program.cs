@@ -1,47 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
-using Camadas.Passive;
 using System.Linq;
-using Jovem = Passive;
+using System.Data.SqlClient;
+using Simple.Data;
+
 namespace Camadas.Test.CslApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            TestPassive();
+            TestSimpleData();
             Console.WriteLine("Pressione <Enter>");
             Console.ReadKey();
 
         }
 
-        private static void TestPassive()
+        private static void TestSimpleData()
         {
-            Client c = new Client();
+            var db = Database.OpenNamedConnection("ConnTest");
+            dynamic client = new
+            {
+              Name = "Simple.Data",
+              Created = DateTime.Now.Date.AddDays(-10),
+              Active = false
+            };
+            db.Client.Insert(client);
+            var result = db.Client.All();
+            foreach(var r in result)
+            {
+                System.Console.WriteLine("{0} {1} {2} {3}", r.Id, r.Name, r.Created, r.Active);
+            }
+        }
 
-            //c.Insert(new
-            //{
-            //    Active = true,
-            //    Created = DateTime.Now.Date.AddDays(-5),
-            //    Name = "TestPassive"
-            //});
+        //private static void TestPassive()
+        //{
+        //    Client c = new Client();
 
-            var result = c.All().
-                Select(s => new Client
-                {
-                   Active = s.Active,
-                   Created = s.Created,
-                   Id = s.Id,
-                   Name = s.Name                   
-                })
-                .ToList();
+        //    //c.Insert(new
+        //    //{
+        //    //    Active = true,
+        //    //    Created = DateTime.Now.Date.AddDays(-5),
+        //    //    Name = "TestPassive"
+        //    //});
+
+        //    var result = c.All().
+        //        Select(s => new Client
+        //        {
+        //           Active = s.Active,
+        //           Created = s.Created,
+        //           Id = s.Id,
+        //           Name = s.Name                   
+        //        })
+        //        .ToList();
 
 
                               
                 
             
-            c = null;
-        }
+        //    c = null;
+        //}
 
         //static void TestPetaPoco()
         //{
